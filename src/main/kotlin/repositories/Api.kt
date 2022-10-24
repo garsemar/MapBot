@@ -1,6 +1,6 @@
 package cat.itb.martigarcia7e4.mapBot.repositories
 
-import cat.itb.martigarcia7e4.dam2.m06.uf1.mapBot.model.googleGeo.GoogleGeo
+import cat.itb.martigarcia7e4.mapBot.model.googleGeo.GoogleGeo
 import cat.itb.martigarcia7e4.mapBot.model.tmbRoute.TMBRoute
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*

@@ -3,7 +3,7 @@ package cat.itb.martigarcia7e4.mapBot.logic
 import cat.itb.martigarcia7e4.mapBot.model.Place.Companion.places
 import cat.itb.martigarcia7e4.mapBot.model.tmbRoute.Itineraries
 import cat.itb.martigarcia7e4.mapBot.repositories.Api
-import cat.itb.martigarcia7e4.dam2.m06.uf1.mapBot.model.googleGeo.Location
+import cat.itb.martigarcia7e4.mapBot.model.googleGeo.Location
 import cat.itb.martigarcia7e4.mapBot.model.Place
 import kotlinx.coroutines.*
 import kotlinx.serialization.*
@@ -20,6 +20,7 @@ class Logic {
         if (input.size == 3 && places[id]?.find { it.name == input[1] } == null) {
             val job = GlobalScope.launch {
                 val geo = api.googleGeo(input[2])
+                println(geo)
                 if(geo.status == "ZERO_RESULTS"){
                     return@launch
                 }
@@ -83,7 +84,7 @@ class Logic {
         }
         return route
     }
-    private fun saveData() {
+    fun saveData() {
         val json = Json.encodeToString(places)
         path.writeText(json)
     }

@@ -1,5 +1,6 @@
-package cat.itb.martigarcia7e4.dam2.m06.uf1.mapBot.model.googleGeo
+package cat.itb.martigarcia7e4.mapBot.model.googleGeo
 
+import cat.itb.martigarcia7e4.mapBot.model.googleGeo.Geometry
 import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 

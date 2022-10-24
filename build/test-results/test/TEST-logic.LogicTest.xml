@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic.LogicTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-24T14:46:34" hostname="ZLV-023-hA306-14" time="0.617">
+  <properties/>
+  <testcase name="deletePlace()" classname="logic.LogicTest" time="0.617"/>
+  <system-out><![CDATA[GoogleGeo(results=[Result(geometry=Geometry(location=Location(lat=41.3873974, lng=2.168568)))], status=OK)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

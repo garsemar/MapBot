@@ -56,6 +56,7 @@ class UI {
                 }
                 command("route") {
                     val route = logic.route(message.chat.id, message.text!!.split(" ").toMutableList())
+                    println(route)
                     if (route.isNotEmpty()) {
                         route.first().legs.forEach {
                             if (it.mode == "WALK") {
