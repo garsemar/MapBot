@@ -20,7 +20,6 @@ class Logic {
         if (input.size == 3 && places[id]?.find { it.name == input[1] } == null) {
             val job = GlobalScope.launch {
                 val geo = api.googleGeo(input[2])
-                println(geo)
                 if(geo.status == "ZERO_RESULTS"){
                     return@launch
                 }

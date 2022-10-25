@@ -21,10 +21,10 @@ class UI {
                     bot.sendMessage(
                         chatId = ChatId.fromId(message.chat.id), text = """
                         /start - Start the bot
-                        /set Place name Address without spaces(c/street,number,city) - Set a place
+                        /set Place name Address without spaces ex: c/street,number,city - Set a place
                         /list - List all places
                         /delete place name - Delete a place
-                        /route [origin place name or address], [destination place name or address] - Get the route between two places
+                        /route [origin place name or address], [destination place name or address] - Get the route between two places, address without spaces ex: c/street,number,city
                         /help - Show this message
                     """.trimIndent()
                     )
@@ -56,7 +56,6 @@ class UI {
                 }
                 command("route") {
                     val route = logic.route(message.chat.id, message.text!!.split(" ").toMutableList())
-                    println(route)
                     if (route.isNotEmpty()) {
                         route.first().legs.forEach {
                             if (it.mode == "WALK") {
@@ -85,8 +84,6 @@ class UI {
                 }
             }
         }
-        logic.loadData()
         bot.startPolling()
-        println("Running!")
     }
 }
